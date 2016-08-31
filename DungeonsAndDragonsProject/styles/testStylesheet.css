@@ -1,0 +1,29 @@
+﻿body {
+
+}
+.label{
+    font-weight: bold;
+    margin-right:10px;
+}
+.txtbx{
+    width:50px;
+    border-bottom: solid 2px black;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-size:25pt;
+    height:auto;
+    text-align:center;
+}
+td{
+    padding:5px;
+}
+.button{
+    height:50px;
+    width:50px;
+    background-color:white;
+    border: 2px solid black;
+}
+img{
+    padding: 0 5px;
+}
