@@ -3,7 +3,6 @@
 }
 .label{
     font-weight: bold;
-    margin-right:10px;
 }
 .txtbx{
     width:50px;
@@ -18,7 +17,7 @@
 td{
     padding:5px;
 }
-.button{
+.btn{
     height:50px;
     width:50px;
     background-color:white;

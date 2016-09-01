@@ -22,49 +22,49 @@ namespace DungeonsAndDragonsProject {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// tblAbility control.
+        /// tblAbilities control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table tblAbility;
+        protected global::System.Web.UI.WebControls.Table tblAbilities;
         
         /// <summary>
-        /// lblStre control.
+        /// lblStr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblStre;
+        protected global::System.Web.UI.WebControls.Label lblStr;
         
         /// <summary>
-        /// txtStre control.
+        /// txtStr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtStre;
+        protected global::System.Web.UI.WebControls.TextBox txtStr;
         
         /// <summary>
-        /// btnRollStre control.
+        /// btnStr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRollStre;
+        protected global::System.Web.UI.WebControls.Button btnStr;
         
         /// <summary>
-        /// cellStreDice control.
+        /// cellStr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell cellStreDice;
+        protected global::System.Web.UI.WebControls.TableCell cellStr;
         
         /// <summary>
         /// lblDex control.
@@ -85,22 +85,22 @@ namespace DungeonsAndDragonsProject {
         protected global::System.Web.UI.WebControls.TextBox txtDex;
         
         /// <summary>
-        /// btnRollDex control.
+        /// btnDex control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRollDex;
+        protected global::System.Web.UI.WebControls.Button btnDex;
         
         /// <summary>
-        /// cellDexDice control.
+        /// cellDex control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell cellDexDice;
+        protected global::System.Web.UI.WebControls.TableCell cellDex;
         
         /// <summary>
         /// lblCon control.
@@ -121,22 +121,22 @@ namespace DungeonsAndDragonsProject {
         protected global::System.Web.UI.WebControls.TextBox txtCon;
         
         /// <summary>
-        /// btnRollCon control.
+        /// btnCon control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRollCon;
+        protected global::System.Web.UI.WebControls.Button btnCon;
         
         /// <summary>
-        /// cellConDice control.
+        /// cellCon control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell cellConDice;
+        protected global::System.Web.UI.WebControls.TableCell cellCon;
         
         /// <summary>
         /// lblInt control.
@@ -157,22 +157,22 @@ namespace DungeonsAndDragonsProject {
         protected global::System.Web.UI.WebControls.TextBox txtInt;
         
         /// <summary>
-        /// btnRollInt control.
+        /// btnInt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRollInt;
+        protected global::System.Web.UI.WebControls.Button btnInt;
         
         /// <summary>
-        /// cellIntDice control.
+        /// cellInt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell cellIntDice;
+        protected global::System.Web.UI.WebControls.TableCell cellInt;
         
         /// <summary>
         /// lblWis control.
@@ -193,57 +193,57 @@ namespace DungeonsAndDragonsProject {
         protected global::System.Web.UI.WebControls.TextBox txtWis;
         
         /// <summary>
-        /// btnRollWis control.
+        /// btnWis control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRollWis;
+        protected global::System.Web.UI.WebControls.Button btnWis;
         
         /// <summary>
-        /// cellWisDice control.
+        /// cellWis control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell cellWisDice;
+        protected global::System.Web.UI.WebControls.TableCell cellWis;
         
         /// <summary>
-        /// lblChar control.
+        /// lblCha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblChar;
+        protected global::System.Web.UI.WebControls.Label lblCha;
         
         /// <summary>
-        /// txtChar control.
+        /// txtCha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtChar;
+        protected global::System.Web.UI.WebControls.TextBox txtCha;
         
         /// <summary>
-        /// btnRollChar control.
+        /// btnCha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRollChar;
+        protected global::System.Web.UI.WebControls.Button btnCha;
         
         /// <summary>
-        /// cellCharDice control.
+        /// cellCha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell cellCharDice;
+        protected global::System.Web.UI.WebControls.TableCell cellCha;
     }
 }

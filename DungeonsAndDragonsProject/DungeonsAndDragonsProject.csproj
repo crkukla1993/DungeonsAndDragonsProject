@@ -94,17 +94,19 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AbilityScoresTest.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="scripts\jquery-3.1.0.intellisense.js" />
-    <Content Include="scripts\jquery-3.1.0.js" />
-    <Content Include="scripts\jquery-3.1.0.min.js" />
-    <Content Include="scripts\jquery-3.1.0.slim.js" />
-    <Content Include="scripts\jquery-3.1.0.slim.min.js" />
-    <Content Include="scripts\jquery-3.1.0.slim.min.map" />
-    <Content Include="scripts\jquery-3.1.0.min.map" />
+    <None Include="scripts\JQuery\jquery-3.1.0.intellisense.js" />
+    <Content Include="scripts\abilityScripts.js" />
+    <Content Include="scripts\JQuery\jquery-3.1.0.js" />
+    <Content Include="scripts\JQuery\jquery-3.1.0.min.js" />
+    <Content Include="scripts\JQuery\jquery-3.1.0.slim.js" />
+    <Content Include="scripts\JQuery\jquery-3.1.0.slim.min.js" />
+    <Content Include="scripts\JQuery\jquery-3.1.0.slim.min.map" />
+    <Content Include="scripts\JQuery\jquery-3.1.0.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -113,7 +115,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AbilityScoresTest.aspx" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
     <Content Include="scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="styles\testStylesheet.css" />
