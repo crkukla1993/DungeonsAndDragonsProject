@@ -12,63 +12,91 @@ d6 = new Image();
 d6.src = 'images/dice/6.png';
 
 function rollForAbility(ability) {
+    var dieArr = [];
+    var rand = null;
     findAbility(ability);
     die0 = new Image(45, 45);
     die1 = new Image(45, 45);
     die2 = new Image(45, 45);
     die3 = new Image(45, 45);
-    cell.appendChild(die0);
-    cell.appendChild(die1);
-    cell.appendChild(die2);
-    cell.appendChild(die3);
-    var rand = rollRand(1, 6);
+    if (cell.children.length > 0) {
+        cell.replaceChild(die0, cell.children[0]);
+        cell.replaceChild(die1, cell.children[1]);
+        cell.replaceChild(die2, cell.children[2]);
+        cell.replaceChild(die3, cell.children[3]);
+    }
+    else {
+        cell.appendChild(die0);
+        cell.appendChild(die1);
+        cell.appendChild(die2);
+        cell.appendChild(die3);
+    }
+    dieArr[0] = rand = rollRand(1, 6);
+    setImgSource(die0, rand);
+    dieArr[1] = rand = rollRand(1, 6);
+    setImgSource(die1, rand);
+    dieArr[2] = rand = rollRand(1, 6);
+    setImgSource(die2, rand);
+    dieArr[3] = rand = rollRand(1, 6);
+    setImgSource(die3, rand);
+
+    dieArr.sort(function (a, b) { return a - b; });
+    var total = dieArr[1] + dieArr[2] + dieArr[3];
+    txtbx.value = total;
+}
+
+function setImgSource(die, rand) {
     switch (rand) {
         case 1:
-            die0.src = d1.src.toString();
+            die.src = d1.src.toString();
+            break;
         case 2:
-            die0.src = d2.src.toString();
+            die.src = d2.src.toString();
+            break;
         case 3:
-            die0.src = d3.src.toString();
+            die.src = d3.src.toString();
+            break;
         case 4:
-            die0.src = d4.src.toString();
+            die.src = d4.src.toString();
+            break;
         case 5:
-            die0.src = d5.src.toString();
+            die.src = d5.src.toString();
+            break
         case 6:
-            die0.src = d6.src.toString();
-    }
-    
-    
-}
-
-function rollRand(min, max) {
-    return Math.round(Math.random() * (max - min) + min);
-}
-
-function findAbility(ability) {
-    switch (ability) {
-        case 'str':
-            cell = document.getElementById('cellStr');
-            txtbx = document.getElementById('txtStr');
-            break;
-        case 'dex':
-            cell = document.getElementById('cellDex');
-            txtbx = document.getElementById('txtDex');
-            break;
-        case 'con':
-            cell = document.getElementById('cellCon');
-            txtbx = document.getElementById('txtCon');
-            break;
-        case 'int':
-            cell = document.getElementById('cellInt');
-            txtbx = document.getElementById('txtInt');
-            break;
-        case 'wis':
-            cell = document.getElementById('cellWis');
-            txtbx = document.getElementById('txtWis');
-            break;
-        case 'cha':
-            cell = document.getElementById('cellCha');
-            txtbx = document.getElementById('txtCha');
+            die.src = d6.src.toString();
             break;
     }
 }
+
+    function rollRand(min, max) {
+        return Math.round(Math.random() * (max - min) + min);
+    }
+
+    function findAbility(ability) {
+        switch (ability) {
+            case 'str':
+                cell = document.getElementById('cellStr');
+                txtbx = document.getElementById('txtStr');
+                break;
+            case 'dex':
+                cell = document.getElementById('cellDex');
+                txtbx = document.getElementById('txtDex');
+                break;
+            case 'con':
+                cell = document.getElementById('cellCon');
+                txtbx = document.getElementById('txtCon');
+                break;
+            case 'int':
+                cell = document.getElementById('cellInt');
+                txtbx = document.getElementById('txtInt');
+                break;
+            case 'wis':
+                cell = document.getElementById('cellWis');
+                txtbx = document.getElementById('txtWis');
+                break;
+            case 'cha':
+                cell = document.getElementById('cellCha');
+                txtbx = document.getElementById('txtCha');
+                break;
+        }
+    }
