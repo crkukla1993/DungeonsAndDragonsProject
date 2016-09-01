@@ -39,6 +39,10 @@ function rollForAbility(ability) {
         die1 = new Image(45, 45);
         die2 = new Image(45, 45);
         die3 = new Image(45, 45);
+        die0.style.display = 'none';
+        die1.style.display = 'none';
+        die2.style.display = 'none';
+        die3.style.display = 'none';
 
         if (cell.children.length > 0) {
             cell.replaceChild(die0, cell.children[0]);
@@ -52,11 +56,13 @@ function rollForAbility(ability) {
             cell.appendChild(die2);
             cell.appendChild(die3);
         }
-        
+        $(die0).fadeIn(500);
+        $(die1).fadeIn(500);
+        $(die2).fadeIn(500);
+        $(die3).fadeIn(500);
         interval0 = setInterval(function () {
             if (count0 >= 10) {
                 clearInterval(interval0);
-                interval0 = undefined;
             }
             else {
                 dieArr[0] = rollRand(1, 6);
@@ -95,6 +101,7 @@ function rollForAbility(ability) {
                 dieArr.sort(function (a, b) { return a - b; });
                 var total = dieArr[1] + dieArr[2] + dieArr[3];
                 txtbx.value = total;
+                interval0 = undefined;
             }
             else {
                 dieArr[3] = rollRand(1, 6);
@@ -102,10 +109,17 @@ function rollForAbility(ability) {
                 count3++;
             }
         }, 50);
-
-        setTimeout(function () {
-        }, 500);
+        fadeOutDice(die0, die1, die2, die3);
     }
+}
+
+function fadeOutDice(di0, di1, di2, di3) {
+    setTimeout(function () {
+        $(di0).fadeOut(500);
+        $(di1).fadeOut(500);
+        $(di2).fadeOut(500);
+        $(di3).fadeOut(500);
+    }, 3000);
 }
 
 function setDieAsLowest(arr) {
