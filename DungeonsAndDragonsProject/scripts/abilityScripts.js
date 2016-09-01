@@ -14,11 +14,14 @@ d6.src = 'images/dice/6.png';
 function rollForAbility(ability) {
     var dieArr = [];
     var rand = null;
+
     findAbility(ability);
+
     die0 = new Image(45, 45);
     die1 = new Image(45, 45);
     die2 = new Image(45, 45);
     die3 = new Image(45, 45);
+
     if (cell.children.length > 0) {
         cell.replaceChild(die0, cell.children[0]);
         cell.replaceChild(die1, cell.children[1]);
@@ -67,7 +70,6 @@ function setImgSource(die, rand) {
             break;
     }
 }
-
     function rollRand(min, max) {
         return Math.round(Math.random() * (max - min) + min);
     }
