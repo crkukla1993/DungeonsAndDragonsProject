@@ -10,42 +10,121 @@ d5 = new Image();
 d5.src = 'images/dice/5.png';
 d6 = new Image();
 d6.src = 'images/dice/6.png';
+d1R = new Image();
+d1R.src = 'images/dice/1R.png';
+d2R = new Image();
+d2R.src = 'images/dice/2R.png';
+d3R = new Image();
+d3R.src = 'images/dice/3R.png';
+d4R = new Image();
+d4R.src = 'images/dice/4R.png';
+d5R = new Image();
+d5R.src = 'images/dice/5R.png';
+d6R = new Image();
+d6R.src = 'images/dice/6R.png';
+interval0 = undefined;
 
 function rollForAbility(ability) {
-    var dieArr = [];
-    var rand = null;
+    if (interval0 == undefined) {
+        var dieArr = [];
+        var rand = null;
+        var count0 = 0;
+        var count1 = 0;
+        var count2 = 0;
+        var count3 = 0;
 
-    findAbility(ability);
+        findAbility(ability);
 
-    die0 = new Image(45, 45);
-    die1 = new Image(45, 45);
-    die2 = new Image(45, 45);
-    die3 = new Image(45, 45);
+        die0 = new Image(45, 45);
+        die1 = new Image(45, 45);
+        die2 = new Image(45, 45);
+        die3 = new Image(45, 45);
 
-    if (cell.children.length > 0) {
-        cell.replaceChild(die0, cell.children[0]);
-        cell.replaceChild(die1, cell.children[1]);
-        cell.replaceChild(die2, cell.children[2]);
-        cell.replaceChild(die3, cell.children[3]);
+        if (cell.children.length > 0) {
+            cell.replaceChild(die0, cell.children[0]);
+            cell.replaceChild(die1, cell.children[1]);
+            cell.replaceChild(die2, cell.children[2]);
+            cell.replaceChild(die3, cell.children[3]);
+        }
+        else {
+            cell.appendChild(die0);
+            cell.appendChild(die1);
+            cell.appendChild(die2);
+            cell.appendChild(die3);
+        }
+        
+        interval0 = setInterval(function () {
+            if (count0 >= 10) {
+                clearInterval(interval0);
+                interval0 = undefined;
+            }
+            else {
+                dieArr[0] = rollRand(1, 6);
+                setImgSource(die0, dieArr[0]);
+                count0++;
+            }
+        }, 50);
+
+        interval1 = setInterval(function () {
+            if (count1 >= 10) {
+                clearInterval(interval1);
+            }
+            else {
+                dieArr[1] = rollRand(1, 6);
+                setImgSource(die1, dieArr[1]);
+                count1++;
+            }
+        }, 50);
+
+        interval2 = setInterval(function () {
+            if (count2 >= 10) {
+                clearInterval(interval2);
+            }
+            else {
+                dieArr[2] = rollRand(1, 6);
+                setImgSource(die2, dieArr[2]);
+                count2++;
+            }
+        }, 50);
+
+        interval3 = setInterval(function () {
+            if (count3 >= 10) {
+                clearInterval(interval3);
+                var arr = dieArr.slice();
+                setDieAsLowest(arr);
+                dieArr.sort(function (a, b) { return a - b; });
+                var total = dieArr[1] + dieArr[2] + dieArr[3];
+                txtbx.value = total;
+            }
+            else {
+                dieArr[3] = rollRand(1, 6);
+                setImgSource(die3, dieArr[3]);
+                count3++;
+            }
+        }, 50);
+
+        setTimeout(function () {
+        }, 500);
     }
-    else {
-        cell.appendChild(die0);
-        cell.appendChild(die1);
-        cell.appendChild(die2);
-        cell.appendChild(die3);
-    }
-    dieArr[0] = rand = rollRand(1, 6);
-    setImgSource(die0, rand);
-    dieArr[1] = rand = rollRand(1, 6);
-    setImgSource(die1, rand);
-    dieArr[2] = rand = rollRand(1, 6);
-    setImgSource(die2, rand);
-    dieArr[3] = rand = rollRand(1, 6);
-    setImgSource(die3, rand);
+}
 
-    dieArr.sort(function (a, b) { return a - b; });
-    var total = dieArr[1] + dieArr[2] + dieArr[3];
-    txtbx.value = total;
+function setDieAsLowest(arr) {
+    var tmp = arr.slice();
+    tmp.sort(function (a, b) { return a - b; });
+    switch (arr.indexOf(tmp[0])) {
+        case 0:
+            setMinImgSource(die0, tmp[0]);
+            break;
+        case 1:
+            setMinImgSource(die1, tmp[0]);
+            break;
+        case 2:
+            setMinImgSource(die2, tmp[0]);
+            break;
+        case 3:
+            setMinImgSource(die3, tmp[0]);
+            break;
+    }
 }
 
 function setImgSource(die, rand) {
@@ -67,6 +146,28 @@ function setImgSource(die, rand) {
             break
         case 6:
             die.src = d6.src.toString();
+            break;
+    }
+}
+function setMinImgSource(die, num) {
+    switch (num) {
+        case 1:
+            die.src = d1R.src.toString();
+            break;
+        case 2:
+            die.src = d2R.src.toString();
+            break;
+        case 3:
+            die.src = d3R.src.toString();
+            break;
+        case 4:
+            die.src = d4R.src.toString();
+            break;
+        case 5:
+            die.src = d5R.src.toString();
+            break
+        case 6:
+            die.src = d6R.src.toString();
             break;
     }
 }
