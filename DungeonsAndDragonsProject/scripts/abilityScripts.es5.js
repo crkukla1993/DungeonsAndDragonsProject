@@ -1,15 +1,17 @@
-﻿d1 = new Image(); d1.src = 'images/dice/1.png';
-d2 = new Image(); d2.src = 'images/dice/2.png';
-d3 = new Image(); d3.src = 'images/dice/3.png';
-d4 = new Image(); d4.src = 'images/dice/4.png';
-d5 = new Image(); d5.src = 'images/dice/5.png';
-d6 = new Image(); d6.src = 'images/dice/6.png';
-d1R = new Image(); d1R.src = 'images/dice/1R.png';
-d2R = new Image(); d2R.src = 'images/dice/2R.png';
-d3R = new Image(); d3R.src = 'images/dice/3R.png';
-d4R = new Image(); d4R.src = 'images/dice/4R.png';
-d5R = new Image(); d5R.src = 'images/dice/5R.png';
-d6R = new Image(); d6R.src = 'images/dice/6R.png';
+﻿'use strict';
+
+d1 = new Image();d1.src = 'images/dice/1.png';
+d2 = new Image();d2.src = 'images/dice/2.png';
+d3 = new Image();d3.src = 'images/dice/3.png';
+d4 = new Image();d4.src = 'images/dice/4.png';
+d5 = new Image();d5.src = 'images/dice/5.png';
+d6 = new Image();d6.src = 'images/dice/6.png';
+d1R = new Image();d1R.src = 'images/dice/1R.png';
+d2R = new Image();d2R.src = 'images/dice/2R.png';
+d3R = new Image();d3R.src = 'images/dice/3R.png';
+d4R = new Image();d4R.src = 'images/dice/4R.png';
+d5R = new Image();d5R.src = 'images/dice/5R.png';
+d6R = new Image();d6R.src = 'images/dice/6R.png';
 interval0 = undefined;
 random = new Random();
 
@@ -27,7 +29,7 @@ function rollForAbility(ability) {
                     ability = 'str';
                     break;
                 case 1:
-                    ability = 'dex'
+                    ability = 'dex';
                     break;
                 case 2:
                     ability = 'con';
@@ -58,8 +60,7 @@ function rollForAbility(ability) {
                 cell.replaceChild(die1, cell.children[1]);
                 cell.replaceChild(die2, cell.children[2]);
                 cell.replaceChild(die3, cell.children[3]);
-            }
-            else {
+            } else {
                 cell.appendChild(die0);
                 cell.appendChild(die1);
                 cell.appendChild(die2);
@@ -72,8 +73,7 @@ function rollForAbility(ability) {
             interval0 = setInterval(function () {
                 if (count0 >= 10) {
                     clearInterval(interval0);
-                }
-                else {
+                } else {
                     dieArr[0] = rollRand(1, 6);
                     setImgSource(die0, dieArr[0]);
                     count0++;
@@ -83,8 +83,7 @@ function rollForAbility(ability) {
             interval1 = setInterval(function () {
                 if (count1 >= 10) {
                     clearInterval(interval1);
-                }
-                else {
+                } else {
                     dieArr[1] = rollRand(1, 6);
                     setImgSource(die1, dieArr[1]);
                     count1++;
@@ -94,8 +93,7 @@ function rollForAbility(ability) {
             interval2 = setInterval(function () {
                 if (count2 >= 10) {
                     clearInterval(interval2);
-                }
-                else {
+                } else {
                     dieArr[2] = rollRand(1, 6);
                     setImgSource(die2, dieArr[2]);
                     count2++;
@@ -107,12 +105,13 @@ function rollForAbility(ability) {
                     clearInterval(interval3);
                     var arr = dieArr.slice();
                     setDieAsLowest(arr);
-                    dieArr.sort(function (a, b) { return a - b; });
+                    dieArr.sort(function (a, b) {
+                        return a - b;
+                    });
                     var total = dieArr[1] + dieArr[2] + dieArr[3];
                     txtbx.value = total;
                     interval0 = undefined;
-                }
-                else {
+                } else {
                     dieArr[3] = rollRand(1, 6);
                     setImgSource(die3, dieArr[3]);
                     count3++;
@@ -134,7 +133,9 @@ function fadeOutDice(di0, di1, di2, di3) {
 
 function setDieAsLowest(arr) {
     var tmp = arr.slice();
-    tmp.sort(function (a, b) { return a - b; });
+    tmp.sort(function (a, b) {
+        return a - b;
+    });
     switch (arr.indexOf(tmp[0])) {
         case 0:
             setMinImgSource(die0, tmp[0]);
@@ -228,3 +229,4 @@ function findAbility(ability) {
             break;
     }
 }
+
