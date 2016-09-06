@@ -22,6 +22,141 @@ namespace DungeonsAndDragonsProject {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// tblCharData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table tblCharData;
+        
+        /// <summary>
+        /// lblCharName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCharName;
+        
+        /// <summary>
+        /// lblPlayerName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPlayerName;
+        
+        /// <summary>
+        /// txtCharName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCharName;
+        
+        /// <summary>
+        /// txtPlayerName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPlayerName;
+        
+        /// <summary>
+        /// lblClass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblClass;
+        
+        /// <summary>
+        /// lblLevel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblLevel;
+        
+        /// <summary>
+        /// lblECL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblECL;
+        
+        /// <summary>
+        /// lblRace control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRace;
+        
+        /// <summary>
+        /// sqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlDataSource1;
+        
+        /// <summary>
+        /// sqlDataSource2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlDataSource2;
+        
+        /// <summary>
+        /// ddlClass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlClass;
+        
+        /// <summary>
+        /// txtLevel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtLevel;
+        
+        /// <summary>
+        /// txtECL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtECL;
+        
+        /// <summary>
+        /// ddlRace control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlRace;
+        
+        /// <summary>
         /// tblAbilities control.
         /// </summary>
         /// <remarks>
@@ -29,6 +164,24 @@ namespace DungeonsAndDragonsProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Table tblAbilities;
+        
+        /// <summary>
+        /// btnRollScores control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRollScores;
+        
+        /// <summary>
+        /// btnManualInput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnManualInput;
         
         /// <summary>
         /// lblStr control.
@@ -49,6 +202,15 @@ namespace DungeonsAndDragonsProject {
         protected global::System.Web.UI.WebControls.TextBox txtStr;
         
         /// <summary>
+        /// cellStrBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell cellStrBtn;
+        
+        /// <summary>
         /// btnStr control.
         /// </summary>
         /// <remarks>
@@ -56,6 +218,33 @@ namespace DungeonsAndDragonsProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnStr;
+        
+        /// <summary>
+        /// cellStrPM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell cellStrPM;
+        
+        /// <summary>
+        /// btnStrM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnStrM;
+        
+        /// <summary>
+        /// btnStrP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnStrP;
         
         /// <summary>
         /// cellStr control.
@@ -85,6 +274,15 @@ namespace DungeonsAndDragonsProject {
         protected global::System.Web.UI.WebControls.TextBox txtDex;
         
         /// <summary>
+        /// cellDexBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell cellDexBtn;
+        
+        /// <summary>
         /// btnDex control.
         /// </summary>
         /// <remarks>
@@ -92,6 +290,33 @@ namespace DungeonsAndDragonsProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDex;
+        
+        /// <summary>
+        /// cellDexPM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell cellDexPM;
+        
+        /// <summary>
+        /// btnDexM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDexM;
+        
+        /// <summary>
+        /// btnDexP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDexP;
         
         /// <summary>
         /// cellDex control.
@@ -121,6 +346,15 @@ namespace DungeonsAndDragonsProject {
         protected global::System.Web.UI.WebControls.TextBox txtCon;
         
         /// <summary>
+        /// cellConBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell cellConBtn;
+        
+        /// <summary>
         /// btnCon control.
         /// </summary>
         /// <remarks>
@@ -128,6 +362,33 @@ namespace DungeonsAndDragonsProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCon;
+        
+        /// <summary>
+        /// cellConPM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell cellConPM;
+        
+        /// <summary>
+        /// btnConM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnConM;
+        
+        /// <summary>
+        /// btnConP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnConP;
         
         /// <summary>
         /// cellCon control.
@@ -157,6 +418,15 @@ namespace DungeonsAndDragonsProject {
         protected global::System.Web.UI.WebControls.TextBox txtInt;
         
         /// <summary>
+        /// cellIntBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell cellIntBtn;
+        
+        /// <summary>
         /// btnInt control.
         /// </summary>
         /// <remarks>
@@ -164,6 +434,33 @@ namespace DungeonsAndDragonsProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnInt;
+        
+        /// <summary>
+        /// cellIntPM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell cellIntPM;
+        
+        /// <summary>
+        /// btnIntM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnIntM;
+        
+        /// <summary>
+        /// btnIntP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnIntP;
         
         /// <summary>
         /// cellInt control.
@@ -193,6 +490,15 @@ namespace DungeonsAndDragonsProject {
         protected global::System.Web.UI.WebControls.TextBox txtWis;
         
         /// <summary>
+        /// cellWisBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell cellWisBtn;
+        
+        /// <summary>
         /// btnWis control.
         /// </summary>
         /// <remarks>
@@ -200,6 +506,33 @@ namespace DungeonsAndDragonsProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnWis;
+        
+        /// <summary>
+        /// cellWisPM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell cellWisPM;
+        
+        /// <summary>
+        /// btnWisM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnWisM;
+        
+        /// <summary>
+        /// btnWisP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnWisP;
         
         /// <summary>
         /// cellWis control.
@@ -229,6 +562,15 @@ namespace DungeonsAndDragonsProject {
         protected global::System.Web.UI.WebControls.TextBox txtCha;
         
         /// <summary>
+        /// cellChaBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell cellChaBtn;
+        
+        /// <summary>
         /// btnCha control.
         /// </summary>
         /// <remarks>
@@ -236,6 +578,33 @@ namespace DungeonsAndDragonsProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCha;
+        
+        /// <summary>
+        /// cellChaPM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell cellChaPM;
+        
+        /// <summary>
+        /// btnChaM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnChaM;
+        
+        /// <summary>
+        /// btnChaP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnChaP;
         
         /// <summary>
         /// cellCha control.
