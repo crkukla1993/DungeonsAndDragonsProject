@@ -104,13 +104,7 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <None Include="scripts\JQuery\jquery-3.1.0.intellisense.js" />
-    <Content Include="scripts\abilityScripts.es5.js">
-      <DependentUpon>abilityScripts.js</DependentUpon>
-    </Content>
-    <Content Include="scripts\abilityScripts.es5.min.js">
-      <DependentUpon>abilityScripts.es5.js</DependentUpon>
-    </Content>
-    <Content Include="scripts\abilityScripts.js" />
+    <Content Include="scripts\scripts.js" />
     <Content Include="scripts\JQuery\jquery-3.1.0.js" />
     <Content Include="scripts\JQuery\jquery-3.1.0.min.js" />
     <Content Include="scripts\JQuery\jquery-3.1.0.slim.js" />

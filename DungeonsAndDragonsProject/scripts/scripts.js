@@ -13,7 +13,17 @@ d6R = new Image(); d6R.src = 'images/dice/6R.png';
 interval0 = undefined;
 random = new Random();
 
+function rollForScores() {
+    rollForAbility('str');
+    rollForAbility('dex');
+    rollForAbility('con');
+    rollForAbility('int');
+    rollForAbility('wis');
+    rollForAbility('cha');
+}
+
 function rollForAbility(ability) {
+    this.ability = ability;
     if (interval0 === undefined) {
         var dieArr = [];
         var rand = null;
@@ -21,33 +31,13 @@ function rollForAbility(ability) {
         var count1 = 0;
         var count2 = 0;
         var count3 = 0;
-        for (var i = 0; i < 6; i++) {
-            switch (i) {
-                case 0:
-                    ability = 'str';
-                    break;
-                case 1:
-                    ability = 'dex'
-                    break;
-                case 2:
-                    ability = 'con';
-                    break;
-                case 3:
-                    ability = 'int';
-                    break;
-                case 4:
-                    ability = 'wis';
-                    break;
-                case 5:
-                    ability = 'cha';
-                    break;
-            }
-            findAbility(ability);
+        
+            findAbility(ability, this.cell, this.txtbx);
 
-            die0 = new Image(45, 45);
-            die1 = new Image(45, 45);
-            die2 = new Image(45, 45);
-            die3 = new Image(45, 45);
+            this.die0 = new Image(45, 45);
+            this.die1 = new Image(45, 45);
+            this.die2 = new Image(45, 45);
+            this.die3 = new Image(45, 45);
             die0.style.display = 'none';
             die1.style.display = 'none';
             die2.style.display = 'none';
@@ -119,7 +109,7 @@ function rollForAbility(ability) {
                 }
             }, 50);
             fadeOutDice(die0, die1, die2, die3);
-        }
+        
     }
 }
 
@@ -200,7 +190,7 @@ function rollRand(min, max) {
     return random.integer(min, max);
 }
 
-function findAbility(ability) {
+function findAbility(ability, cell, txtbx) {
     switch (ability) {
         case 'str':
             cell = document.getElementById('cellStr');

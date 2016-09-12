@@ -69,7 +69,7 @@
         <asp:Table ID="tblAbilities" runat="server">
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Button ID="btnRollScores" runat="server" Text="Roll For Scores" />
+                    <asp:Button ID="btnRollScores" runat="server" Text="Roll For Scores" OnClientClick="rollForScores()" />
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:Button ID="btnManualInput" runat="server" Text="Manually Enter Scores" />
@@ -137,6 +137,6 @@
             </asp:TableRow>
         </asp:Table>
     </form>
-    <script src="scripts/abilityScripts.js"></script>
+    <script src="scripts/scripts.js"></script>
 </body>
 </html>
