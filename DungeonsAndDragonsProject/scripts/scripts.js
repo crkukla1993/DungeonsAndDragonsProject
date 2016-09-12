@@ -10,11 +10,11 @@ d3R = new Image(); d3R.src = 'images/dice/3R.png';
 d4R = new Image(); d4R.src = 'images/dice/4R.png';
 d5R = new Image(); d5R.src = 'images/dice/5R.png';
 d6R = new Image(); d6R.src = 'images/dice/6R.png';
-interval0 = undefined;
 random = new Random();
 
 function rollForScores() {
-    rollForAbility('str');
+    
+    rollForAbility('str', undefined, undefined, undefined, undefined);
     rollForAbility('dex');
     rollForAbility('con');
     rollForAbility('int');
@@ -22,95 +22,97 @@ function rollForScores() {
     rollForAbility('cha');
 }
 
-function rollForAbility(ability) {
+function rollForAbility(ability, interval0, interval1, interval2, interval3) {
     this.ability = ability;
-    if (interval0 === undefined) {
-        var dieArr = [];
-        var rand = null;
-        var count0 = 0;
-        var count1 = 0;
-        var count2 = 0;
-        var count3 = 0;
-        
-            findAbility(ability, this.cell, this.txtbx);
+    var dieArr = [];
+    var rand = null;
+    var count0 = 0;
+    var count1 = 0;
+    var count2 = 0;
+    var count3 = 0;
+    this.interval0 = interval0;
+    this.interval1 = interval1;
+    this.interval2 = interval2;
+    this.interval3 = interval3;
+    this.cell = findAbilityCell(ability);
+    this.txtbx = findAbilityTxtBx(ability);
 
-            this.die0 = new Image(45, 45);
-            this.die1 = new Image(45, 45);
-            this.die2 = new Image(45, 45);
-            this.die3 = new Image(45, 45);
-            die0.style.display = 'none';
-            die1.style.display = 'none';
-            die2.style.display = 'none';
-            die3.style.display = 'none';
+        this.die0 = new Image(45, 45);
+        this.die1 = new Image(45, 45);
+        this.die2 = new Image(45, 45);
+        this.die3 = new Image(45, 45);
+        this.die0.style.display = 'none';
+        this.die1.style.display = 'none';
+        this.die2.style.display = 'none';
+        this.die3.style.display = 'none';
 
-            if (cell.children.length > 0) {
-                cell.replaceChild(die0, cell.children[0]);
-                cell.replaceChild(die1, cell.children[1]);
-                cell.replaceChild(die2, cell.children[2]);
-                cell.replaceChild(die3, cell.children[3]);
+        if (this.cell.children.length > 0) {
+            this.cell.replaceChild(this.die0, this.cell.children[0]);
+            this.cell.replaceChild(this.die1, this.cell.children[1]);
+            this.cell.replaceChild(this.die2, this.cell.children[2]);
+            this.cell.replaceChild(this.die3, this.cell.children[3]);
+        }
+        else {
+            this.cell.appendChild(this.die0);
+            this.cell.appendChild(this.die1);
+            this.cell.appendChild(this.die2);
+            this.cell.appendChild(this.die3);
+        }
+        $(this.die0).fadeIn(500);
+        $(this.die1).fadeIn(500);
+        $(this.die2).fadeIn(500);
+        $(this.die3).fadeIn(500);
+        this.interval0 = setInterval(function () {
+            if (count0 >= 10) {
+                clearInterval(this.interval0);
             }
             else {
-                cell.appendChild(die0);
-                cell.appendChild(die1);
-                cell.appendChild(die2);
-                cell.appendChild(die3);
+                dieArr[0] = rollRand(1, 6);
+                setImgSource(this.die0, dieArr[0]);
+                count0++;
             }
-            $(die0).fadeIn(500);
-            $(die1).fadeIn(500);
-            $(die2).fadeIn(500);
-            $(die3).fadeIn(500);
-            interval0 = setInterval(function () {
-                if (count0 >= 10) {
-                    clearInterval(interval0);
-                }
-                else {
-                    dieArr[0] = rollRand(1, 6);
-                    setImgSource(die0, dieArr[0]);
-                    count0++;
-                }
-            }, 50);
+        }, 50);
 
-            interval1 = setInterval(function () {
-                if (count1 >= 10) {
-                    clearInterval(interval1);
-                }
-                else {
-                    dieArr[1] = rollRand(1, 6);
-                    setImgSource(die1, dieArr[1]);
-                    count1++;
-                }
-            }, 50);
+        this.interval1 = setInterval(function () {
+            if (count1 >= 10) {
+                clearInterval(this.interval1);
+            }
+            else {
+                dieArr[1] = rollRand(1, 6);
+                setImgSource(this.die1, dieArr[1]);
+                count1++;
+            }
+        }, 50);
 
-            interval2 = setInterval(function () {
-                if (count2 >= 10) {
-                    clearInterval(interval2);
-                }
-                else {
-                    dieArr[2] = rollRand(1, 6);
-                    setImgSource(die2, dieArr[2]);
-                    count2++;
-                }
-            }, 50);
+        this.interval2 = setInterval(function () {
+            if (count2 >= 10) {
+                clearInterval(this.interval2);
+            }
+            else {
+                dieArr[2] = rollRand(1, 6);
+                setImgSource(this.die2, dieArr[2]);
+                count2++;
+            }
+        }, 50);
 
-            interval3 = setInterval(function () {
-                if (count3 >= 10) {
-                    clearInterval(interval3);
-                    var arr = dieArr.slice();
-                    setDieAsLowest(arr);
-                    dieArr.sort(function (a, b) { return a - b; });
-                    var total = dieArr[1] + dieArr[2] + dieArr[3];
-                    txtbx.value = total;
-                    interval0 = undefined;
-                }
-                else {
-                    dieArr[3] = rollRand(1, 6);
-                    setImgSource(die3, dieArr[3]);
-                    count3++;
-                }
-            }, 50);
-            fadeOutDice(die0, die1, die2, die3);
+        this.interval3 = setInterval(function () {
+            if (count3 >= 10) {
+                clearInterval(this.interval3);
+                var arr = dieArr.slice();
+                setDieAsLowest(arr);
+                dieArr.sort(function (a, b) { return a - b; });
+                var total = dieArr[1] + dieArr[2] + dieArr[3];
+                this.txtbx.value = total;
+                this.interval0 = undefined;
+            }
+            else {
+                dieArr[3] = rollRand(1, 6);
+                setImgSource(this.die3, dieArr[3]);
+                count3++;
+            }
+        }, 50);
+        fadeOutDice(this.die0, this.die1, this.die2, this.die3);
         
-    }
 }
 
 function fadeOutDice(di0, di1, di2, di3) {
@@ -190,31 +192,51 @@ function rollRand(min, max) {
     return random.integer(min, max);
 }
 
-function findAbility(ability, cell, txtbx) {
+function findAbilityCell(ability) {
+    var cell = null;
     switch (ability) {
         case 'str':
             cell = document.getElementById('cellStr');
-            txtbx = document.getElementById('txtStr');
             break;
         case 'dex':
             cell = document.getElementById('cellDex');
-            txtbx = document.getElementById('txtDex');
             break;
         case 'con':
             cell = document.getElementById('cellCon');
-            txtbx = document.getElementById('txtCon');
             break;
         case 'int':
             cell = document.getElementById('cellInt');
-            txtbx = document.getElementById('txtInt');
             break;
         case 'wis':
             cell = document.getElementById('cellWis');
-            txtbx = document.getElementById('txtWis');
             break;
         case 'cha':
             cell = document.getElementById('cellCha');
+            break;
+    }
+    return cell;
+}
+function findAbilityTxtBx(ability) {
+    var txtbx = null;
+    switch (ability) {
+        case 'str':
+            txtbx = document.getElementById('txtStr');
+            break;
+        case 'dex':
+            txtbx = document.getElementById('txtDex');
+            break;
+        case 'con':
+            txtbx = document.getElementById('txtCon');
+            break;
+        case 'int':
+            txtbx = document.getElementById('txtInt');
+            break;
+        case 'wis':
+            txtbx = document.getElementById('txtWis');
+            break;
+        case 'cha':
             txtbx = document.getElementById('txtCha');
             break;
     }
+    return txtbx;
 }
